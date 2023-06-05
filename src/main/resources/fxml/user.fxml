@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="486.0" style="-fx-background-color: #1f5e5b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.imdadia.tailor.controller.UserController">
+   <children>
+      <Label alignment="CENTER" layoutX="135.0" layoutY="14.0" prefHeight="35.0" prefWidth="232.0" text="Signup" textFill="#f2fffb">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="135.0" layoutY="58.0" prefHeight="29.0" prefWidth="232.0" promptText="First Name" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastNameField" layoutX="135.0" layoutY="103.0" prefHeight="27.0" prefWidth="232.0" promptText="Last Name" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="userPasswordField" layoutX="135.0" layoutY="190.0" prefHeight="27.0" prefWidth="232.0" promptText="Password" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="mobNoField" layoutX="135.0" layoutY="234.0" prefHeight="27.0" prefWidth="232.0" promptText="Mob No" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="address" layoutX="135.0" layoutY="279.0" prefHeight="27.0" prefWidth="232.0" promptText="Adress" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="142.0" layoutY="332.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="25.0" prefWidth="60.0" text="Save" textFill="#030202" />
+      <Button layoutX="304.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Back" onAction="#backButton" textFill="#090a08" />
+      <Button layoutX="227.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Clear" onAction="#clearButton"  />
+      <TextField fx:id="userNameField" layoutX="135.0" layoutY="150.0" prefHeight="27.0" prefWidth="232.0" promptText="Username" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+   </children>
+   <effect>
+      <ColorAdjust brightness="-0.14" contrast="0.03" hue="0.1" saturation="-0.02" />
+   </effect>
+</AnchorPane>

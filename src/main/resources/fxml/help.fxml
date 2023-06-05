@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: null;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.imdadia.tailor.controller.HelpController">
+   <children>
+      <ImageView fitHeight="77.0" fitWidth="75.0" layoutX="106.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/help.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="170.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help Center" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="206.13671875">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <TextArea cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="74.0" layoutY="117.0" prefHeight="248.0" prefWidth="511.0" scaleShape="false" style="-fx-background-color: null;" text="Hel Center&#10;    When you run your application ,A login page will appear.&#10;   You can enter your name and password to login for&#10;   further information.&#10;   After login page, menu page will appear.&#10;   Here,you vcan manage customers ,workers and account &#10;   details.&#10;   You can add,change ,delete according to your requirment.&#10;">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

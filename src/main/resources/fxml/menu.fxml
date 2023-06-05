@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="rootBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="763.0" style="-fx-background-color: #616A6B;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.imdadia.tailor.controller.MenuController">
+    <top>
+        <MenuBar style="-fx-background-color: #424949;" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="file">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="pages">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#meausrement" text="Meausrement" />
+                        <MenuItem mnemonicParsing="false" onAction="#order" text="Order" />
+                        <MenuItem mnemonicParsing="false" onAction="#user" text="User" />
+                    </items>
+                </Menu>
+            <Menu mnemonicParsing="false" text="View">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#userInfoButton" text="User Information" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tables">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#measurementTableButton" text="meausrement Table" />
+               </items>
+            </Menu>
+                <Menu fx:id="helpButton" mnemonicParsing="false" onAction="#helpButton" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
