@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="846.0" style="-fx-background-color: #1f5e5b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.imdadia.tailor.controller.OrderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="846.0" style="-fx-background-color: #1f5e5b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.imdadia.qurbani.controller.OrderController">
    <children>
       <Button layoutX="65.0" layoutY="351.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="25.0" prefWidth="68.0" text="Save" textFill="#030202" />
       <Button layoutX="229.0" layoutY="351.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="68.0" text="Back" textFill="#090a08" />
