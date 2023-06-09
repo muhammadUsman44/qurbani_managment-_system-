@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="778.0" style="-fx-background-color: #1f5e5b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="778.0" style="-fx-background-color: #1f5e5b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.imdadia.qurbani.controller.DataManagementController">
    <children>
       <ChoiceBox fx:id="animalChoiceBox" layoutX="145.0" layoutY="71.0" prefHeight="25.0" prefWidth="113.0" />
       <TextField fx:id="animalNumbereField" layoutX="17.0" layoutY="120.0" prefHeight="29.0" prefWidth="113.0" promptText="ID" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
@@ -78,7 +78,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField fx:id="mobNoField" layoutX="374.0" layoutY="24.0" prefHeight="29.0" prefWidth="145.0" promptText="Mob No" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
+      <TextField fx:id="mobNoField" layoutX="371.0" layoutY="24.0" prefHeight="29.0" prefWidth="145.0" promptText="Mob No" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
