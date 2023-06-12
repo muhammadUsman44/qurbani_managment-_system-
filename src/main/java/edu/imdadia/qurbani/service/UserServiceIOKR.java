@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceIOKR implements UserService{
 
 
     private final UserRepo userRepo;
 
-    public UserServiceImpl(UserRepo userRepo) {
+    public UserServiceIOKR(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
 

@@ -17,7 +17,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="pages">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#meausrement" text="Meausrement" />
+                        <MenuItem mnemonicParsing="false" onAction="#dataManagement" text="dataManagement" />
                         <MenuItem mnemonicParsing="false" onAction="#order" text="Order" />
                         <MenuItem mnemonicParsing="false" onAction="#user" text="User" />
                     </items>

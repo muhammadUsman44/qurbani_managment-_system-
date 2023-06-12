@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceIOKR implements OrderService {
 
     private final OrderRepo orderRepo;
 

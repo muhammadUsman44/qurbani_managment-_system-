@@ -38,8 +38,8 @@ public class MenuController implements Initializable {
     }
 
 
-    public void meausrement() throws Exception {
-        switchView(FxmlView.MEAUSREMENT);
+    public void dataManagement() throws Exception {
+        switchView(FxmlView.dataManagement);
     }
 
     public void order() throws Exception {

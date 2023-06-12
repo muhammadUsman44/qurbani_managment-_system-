@@ -50,15 +50,15 @@ public enum FxmlView {
     }
   },
 
-  MEAUSREMENT {
+  dataManagement {
     @Override
     public String getTitle() {
-      return getStringFromResourceBundle("meausrement.title");
+      return getStringFromResourceBundle("dataManagement.title");
     }
 
     @Override
     public String getFxmlFile() {
-      return "/fxml/meausrement.fxml";
+      return "/fxml/dataManagement.fxml";
     }
   },
   USER {
