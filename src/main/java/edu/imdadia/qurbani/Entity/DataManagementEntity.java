@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 @Data
 @Entity
-@Table(name = "dataManagement", schema = "qms")
+@Table(name = "dataManagement", schema = "tailor")
 public class DataManagementEntity {
 
     @Column(name = "choice_animal")
