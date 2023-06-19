@@ -4,7 +4,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -37,29 +40,24 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <TextField layoutX="19.0" layoutY="182.0" prefHeight="29.0" prefWidth="121.0" promptText="ID" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </TextField>
       <TextField layoutX="145.0" layoutY="182.0" prefHeight="29.0" prefWidth="121.0" promptText="ID" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <TextField layoutX="23.0" layoutY="225.0" prefHeight="29.0" prefWidth="121.0" promptText="ID" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
+      <TextField layoutX="19.0" layoutY="182.0" prefHeight="29.0" prefWidth="121.0" promptText="ID" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <CheckBox fx:id="hisa1" layoutX="43.0" layoutY="306.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.1" />
-      <CheckBox fx:id="hisa12" layoutX="127.0" layoutY="306.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.2" />
-      <CheckBox fx:id="hisa14" layoutX="213.0" layoutY="307.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.3" />
-      <CheckBox fx:id="hisa13" layoutX="43.0" layoutY="344.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.4" />
-      <CheckBox fx:id="hisa11" layoutX="127.0" layoutY="344.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.5" />
-      <CheckBox fx:id="hisa15" layoutX="213.0" layoutY="344.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.6" />
-      <CheckBox fx:id="hisa151" layoutX="43.0" layoutY="380.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.7" />
-      <Label layoutX="64.0" layoutY="254.0" prefHeight="49.0" prefWidth="354.0" text="Choice box " textFill="#f2fffb">
+      <CheckBox fx:id="hisa1" layoutX="33.0" layoutY="254.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.1" />
+      <CheckBox fx:id="hisa12" layoutX="117.0" layoutY="254.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.2" />
+      <CheckBox fx:id="hisa14" layoutX="203.0" layoutY="255.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.3" />
+      <CheckBox fx:id="hisa13" layoutX="33.0" layoutY="292.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.4" />
+      <CheckBox fx:id="hisa11" layoutX="117.0" layoutY="292.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.5" />
+      <CheckBox fx:id="hisa15" layoutX="203.0" layoutY="292.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.6" />
+      <CheckBox fx:id="hisa151" layoutX="33.0" layoutY="328.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="HisaNo.7" />
+      <Label layoutX="54.0" layoutY="202.0" prefHeight="49.0" prefWidth="354.0" text="Choice box " textFill="#f2fffb">
          <font>
             <Font name="Century" size="30.0" />
          </font>
@@ -69,32 +67,42 @@
             <Font name="Century" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="137.0" layoutY="376.0" prefHeight="36.0" prefWidth="145.0" text="Choice payy " textFill="#f2fffb">
+      <Label layoutX="127.0" layoutY="324.0" prefHeight="36.0" prefWidth="145.0" text="Choice payy " textFill="#f2fffb">
          <font>
             <Font name="Century" size="22.0" />
          </font>
       </Label>
       <Button layoutX="22.0" layoutY="474.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="25.0" prefWidth="71.0" text="Save" />
       <Button layoutX="197.0" layoutY="474.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="25.0" prefWidth="71.0" text="Update" />
-      <Button layoutX="109.0" layoutY="474.0" mnemonicParsing="false" onAction="#deleteById" prefHeight="25.0" prefWidth="71.0" text="Delete" />
+      <Button layoutX="109.0" layoutY="474.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="71.0" text="Delete" />
       <Button layoutX="26.0" layoutY="526.0" mnemonicParsing="false" onAction="#deleteAllButton" prefHeight="25.0" prefWidth="71.0" text="Delete All" />
-      <Button layoutX="109.0" layoutY="526.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="25.0" prefWidth="71.0" text="Clear" />
+      <Button layoutX="109.0" layoutY="526.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="71.0" text="Clear" />
       <Button layoutX="197.0" layoutY="526.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="71.0" text="Back" />
-      <TextField fx:id="searchField" layoutX="375.0" layoutY="121.0" prefHeight="29.0" prefWidth="87.0" promptText="Search" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
+      <TextField fx:id="searchField" layoutX="337.0" layoutY="92.0" prefHeight="29.0" prefWidth="145.0" promptText="Search" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 20; -fx-text-fill: white;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <Button layoutX="381.0" layoutY="169.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" text="Search" />
-      <CheckBox fx:id="hisa16" layoutX="22.0" layoutY="424.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.1" />
-      <CheckBox fx:id="hisa17" layoutX="99.0" layoutY="424.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.2" />
-      <CheckBox fx:id="hisa18" layoutX="171.0" layoutY="424.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.3" />
-      <CheckBox fx:id="hisa19" layoutX="254.0" layoutY="424.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.4" />
+      <Button layoutX="275.0" layoutY="94.0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="57.0" text="Search" />
+      <CheckBox fx:id="hisa16" layoutX="12.0" layoutY="372.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.1" />
+      <CheckBox fx:id="hisa17" layoutX="89.0" layoutY="372.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.2" />
+      <CheckBox fx:id="hisa18" layoutX="161.0" layoutY="372.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.3" />
+      <CheckBox fx:id="hisa19" layoutX="244.0" layoutY="372.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: null; -fx-border-color: black; -fx-text-fill: white;" text="No.4" />
       <Label layoutX="91.0" prefHeight="38.0" prefWidth="212.0" text="Order Form" textFill="#f2fffb">
          <font>
             <Font name="Century" size="34.0" />
          </font>
       </Label>
       <Accordion />
+      <TableView fx:id="tableView" layoutX="337.0" layoutY="150.0" prefHeight="440.0" prefWidth="405.0">
+         <columns>
+            <TableColumn fx:id="firstNameColum" prefWidth="70.0" text="FirstName" />
+            <TableColumn fx:id="lastNameColum" prefWidth="74.0" text="LastName" />
+            <TableColumn fx:id="phoneNoColum" prefWidth="89.0" text="PhoneNo" />
+            <TableColumn fx:id="choiceBoxColum" prefWidth="75.0" text="ChoiceBox" />
+            <TableColumn fx:id="dateColum" prefWidth="96.0" text="DatePicker" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="deliveryDateDatePicker" layoutX="29.0" layoutY="421.0" prefHeight="36.0" prefWidth="232.0" promptText="Date" style="-fx-border-color: white; -fx-text-fill: white;" />
    </children>
 </AnchorPane>

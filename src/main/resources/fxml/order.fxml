@@ -40,7 +40,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </TextField>
-      <TextField fx:id="productNameField" layoutX="65.0" layoutY="120.0" prefHeight="27.0" prefWidth="232.0" promptText="Product Name" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
+      <TextField fx:id="cowNumberField" layoutX="65.0" layoutY="120.0" prefHeight="27.0" prefWidth="232.0" promptText="Cow Number" style="-fx-background-color: null; -fx-border-color: white; -fx-border-radius: 30; -fx-text-fill: white;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

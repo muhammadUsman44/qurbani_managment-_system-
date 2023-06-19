@@ -15,6 +15,10 @@ public interface DataManagementService {
     void deleteAll();
 //    List<DataManagementEntity> findAllByOrderByDataManagementIdAsc();
 
+    List<DataManagementEntity> getAll();
+
+    DataManagementEntity save(DataManagementEntity dataManagement);
+
 
     DataManagementEntity findByFirstName(String item);
 

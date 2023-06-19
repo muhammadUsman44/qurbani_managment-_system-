@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
 @RequiredArgsConstructor
 @Service
 public class OrderServiceIOKR implements OrderService {
@@ -18,10 +19,10 @@ public class OrderServiceIOKR implements OrderService {
 
     @Override
     public void save(OrderEntity orderEntity) {
-        if (orderEntity == null) {
-            JavaFXUtils.showError("..............");
-        } else {
+        if (orderEntity != null) {
             orderRepo.save(orderEntity);
+        } else {
+            JavaFXUtils.showError("..............");
         }
     }
 
@@ -52,6 +53,16 @@ public class OrderServiceIOKR implements OrderService {
         return orderRepo.findById(integer);
 
     }
+//    @Override
+//    public OrderEntity searchByUserName(String str) {
+//        Optional<OrderEntity> orderEntity = orderRepo.cowNumberField();
+//        return orderEntity.orElse(null);
+//    }
+
+        @Override
+    public Optional<OrderEntity> findCowNumber(String name) {
+        return orderRepo.cowNumberField(name);
+    }
 
     @Override
     public void saveAll(List<OrderEntity> orderEntities) {
@@ -77,5 +88,10 @@ public class OrderServiceIOKR implements OrderService {
         Optional<OrderEntity> o = orderRepo.findById(integer);
         OrderEntity orderEntity = o.orElse(null);
         return orderEntity;
+    }
+    @Override
+    public List<OrderEntity> findByCowNumberField(String str) {
+
+        return orderRepo.findByCowNumberField(str);
     }
 }

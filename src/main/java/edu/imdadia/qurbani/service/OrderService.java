@@ -2,6 +2,7 @@ package edu.imdadia.qurbani.service;
 
 
 import edu.imdadia.qurbani.Entity.OrderEntity;
+import edu.imdadia.qurbani.Entity.UserEntity;
 
 
 import java.util.List;
@@ -19,6 +20,8 @@ public interface OrderService {
 
     Optional<OrderEntity> findById(Integer integer);
 
+    Optional<OrderEntity> findCowNumber(String str);
+
 
     void saveAll(List<OrderEntity> orderEntities);
 
@@ -28,5 +31,6 @@ public interface OrderService {
 
     OrderEntity searchByRegNo(Integer integer);
 
+    List<OrderEntity>findByCowNumberField(String str);
 
 }

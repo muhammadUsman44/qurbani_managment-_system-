@@ -8,16 +8,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface DataManagementRepo extends JpaRepository<DataManagementEntity,String> {
+public interface DataManagementRepo extends JpaRepository<DataManagementEntity,Integer> {
 
 
-    Optional<DataManagementEntity> findByMobileNo(String str);
+    Optional<DataManagementEntity> findByLastNameIgnoreCase(String str);
 
-    Optional<DataManagementEntity> findByFirstName(String str);
+    Optional<DataManagementEntity> findByFirstNameIgnoreCase(String str);
 
     Optional<DataManagementEntity> findByLastName(String str);
-//
-//    List<DataManagementEntity> findAllByOrderByOrderIdAsc();
+    List<DataManagementEntity> findAllBy();
 
     Optional<DataManagementEntity> deleteByMobileNo(String str);
 

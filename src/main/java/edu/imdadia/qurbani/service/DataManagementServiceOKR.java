@@ -47,17 +47,29 @@ public class DataManagementServiceOKR implements DataManagementService{
     @Override
     public void deleteAll() {
         dataManagementRepo.deleteAll();
-
     }
 
     @Override
-    public List<DataManagementEntity> findAllByOrderByDataManagementIdAsc() {
-        return null;
+    public List<DataManagementEntity> getAll(){
+        return dataManagementRepo.findAllBy();
     }
+
+    @Override
+    public DataManagementEntity save(DataManagementEntity dataManagement) {
+        if (dataManagement !=null){
+            try {
+                dataManagementRepo.save(dataManagement);
+            }catch (Exception s){
+                JavaFXUtils.showError(s.getMessage());
+            }
+        }
+        return dataManagement;
+    }
+
 
     @Override
     public DataManagementEntity findByFirstName(String item) {
-        Optional<DataManagementEntity>data = dataManagementRepo.findByFirstName(item);
+        Optional<DataManagementEntity>data = dataManagementRepo.findByFirstNameIgnoreCase(item);
         return data.orElse(null);
     }
 
@@ -69,7 +81,7 @@ public class DataManagementServiceOKR implements DataManagementService{
 
     @Override
     public DataManagementEntity findByMob(String item) {
-        Optional<DataManagementEntity> data = dataManagementRepo.findByMobileNo(item);
+        Optional<DataManagementEntity> data = dataManagementRepo.findByLastNameIgnoreCase(item);
         return data.orElse(null);
     }
 }

@@ -60,7 +60,7 @@ public class OrderController implements Initializable {
     private TextField orderIdField;
 
     @FXML
-    private TextField productNameField;
+    private TextField cowNumberField;
     @FXML
     private TextField productPriceField;
     @FXML
@@ -116,17 +116,17 @@ public class OrderController implements Initializable {
             orderIdField.requestFocus();
             return;
         }
-        if (!StringUtils.isBlank(productNameField.getText())) {
+        if (!StringUtils.isBlank(cowNumberField.getText())) {
             try {
-                orderEntity.setProductName(productNameField.getText());
+                orderEntity.setCowNumberField(cowNumberField.getText());
             } catch (NumberFormatException e) {
                 JavaFXUtils.showAlert(Alert.AlertType.WARNING, "Number Format Exception", "PLEASE ENTER INTEGER NUMBER");
-                productNameField.requestFocus();
+                cowNumberField.requestFocus();
                 return;
             }
         } else {
-            JavaFXUtils.showWarningMessage("PLEASE ENTER PRODUCT NAME");
-            productNameField.requestFocus();
+            JavaFXUtils.showWarningMessage("PLEASE ENTER COW NAME");
+            cowNumberField.requestFocus();
             return;
         }
         if (!StringUtils.isBlank(productPriceField.getText())) {
@@ -188,8 +188,8 @@ public class OrderController implements Initializable {
             if (orderEntity.getProductPrice() != null) {
                 productPriceField.setText(String.valueOf(orderEntity.getProductPrice()));
             }
-            if (orderEntity.getProductName() != null) {
-                productNameField.setText(orderEntity.getProductName());
+            if (orderEntity.getCowNumberField() != null) {
+                cowNumberField.setText(orderEntity.getCowNumberField());
             }
             if (orderEntity.getProductQuantity() != null) {
                 productQuantityField.setText(String.valueOf(orderEntity.getProductQuantity()));
@@ -254,7 +254,7 @@ public class OrderController implements Initializable {
 
     private void clear() {
         orderIdField.clear();
-        productNameField.clear();
+        cowNumberField.clear();
         productPriceField.clear();
         productQuantityField.clear();
         deliveryDateDatePicker.getEditor().clear();
@@ -272,7 +272,7 @@ public class OrderController implements Initializable {
         }
         tableView.setItems(FXCollections.observableArrayList(orderEntities));
         this.idColumn.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getOrderId())));
-        this.nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getProductName()));
+        this.nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCowNumberField()));
         this.priceColumn.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getProductPrice())));
         this.totalPriceColumn.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getTotalPrice())));
         this.dateColumn.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getDeliveryDate())));
@@ -287,7 +287,7 @@ public class OrderController implements Initializable {
 
     private void populateRecord(OrderEntity orderEntity) {
         orderIdField.setText(String.valueOf(orderEntity.getOrderId()));
-        productNameField.setText(orderEntity.getProductName());
+        cowNumberField.setText(orderEntity.getCowNumberField());
         productPriceField.setText(String.valueOf(orderEntity.getProductPrice()));
         totalPriceField.setText(String.valueOf(orderEntity.getTotalPrice()));
         productQuantityField.setText(String.valueOf(orderEntity.getProductQuantity()));

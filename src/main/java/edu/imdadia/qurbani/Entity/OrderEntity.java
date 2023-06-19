@@ -16,8 +16,8 @@ public class OrderEntity {
     private Integer orderId;
 
 
-    @Column(name = "PRODUCT_NAME")
-    private String productName;
+    @Column(name = "COW_NUMBER")
+    private String cowNumberField;
 
     @Column(name = "PRODUCT_PRICE")
     private Integer productPrice;

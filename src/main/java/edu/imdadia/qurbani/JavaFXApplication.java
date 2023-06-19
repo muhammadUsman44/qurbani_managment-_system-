@@ -29,11 +29,11 @@ public class JavaFXApplication extends Application {
   }
 
   /**
-   * Useful to override this method by sub-classes wishing to change the first Scene to be displayed
+   * Useful to override this method by subclasses wishing to change the first Scene to be displayed
    * on startup. Example: Functional tests on main window.
    */
   protected void displayInitialScene() {
-    stageManager.switchScene(FxmlView.LOGIN);
+    stageManager.switchScene(FxmlView.MENU);
   }
 
 
