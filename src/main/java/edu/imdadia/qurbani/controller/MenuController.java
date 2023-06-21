@@ -39,24 +39,17 @@ public class MenuController implements Initializable {
 
 
     public void dataManagement() throws Exception {
-        switchView(FxmlView.dataManagement);
+        switchView(FxmlView.data_Management);
     }
 
-    public void order() throws Exception {
-        switchView(FxmlView.ORDER);
+    public void cowData() throws Exception {
+        switchView(FxmlView.COW_DATA);
     }
 
     @FXML
     public void user() throws Exception {
         switchView(FxmlView.USER);
     }
-
-
-    @FXML
-    public void measurementTableButton() throws IOException{
-        switchView(FxmlView.MEAUSREMENT_TABLE);
-    }
-
 
     @FXML
     public void userInfoButton() throws IOException {

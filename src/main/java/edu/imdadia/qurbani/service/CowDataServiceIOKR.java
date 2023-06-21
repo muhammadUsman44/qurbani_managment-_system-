@@ -1,7 +1,7 @@
 package edu.imdadia.qurbani.service;
 
-import edu.imdadia.qurbani.Entity.OrderEntity;
-import edu.imdadia.qurbani.repo.OrderRepo;
+import edu.imdadia.qurbani.Entity.CowDataEntity;
+import edu.imdadia.qurbani.repo.CowDataRepo;
 import edu.imdadia.qurbani.util.JavaFXUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -13,23 +13,23 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
-public class OrderServiceIOKR implements OrderService {
+public class CowDataServiceIOKR implements CowDataService {
 
-    private final OrderRepo orderRepo;
+    private final CowDataRepo cowDataRepo;
 
     @Override
-    public void save(OrderEntity orderEntity) {
-        if (orderEntity != null) {
-            orderRepo.save(orderEntity);
+    public void save(CowDataEntity cowDataEntity) {
+        if (cowDataEntity != null) {
+            cowDataRepo.save(cowDataEntity);
         } else {
             JavaFXUtils.showError("..............");
         }
     }
 
     @Override
-    public void delete(OrderEntity orderEntity) {
+    public void delete(CowDataEntity cowDataEntity) {
         try {
-            orderRepo.delete(orderEntity);
+            cowDataRepo.delete(cowDataEntity);
         } catch (Exception e) {
             JavaFXUtils.showError("WRONG ENTRY");
         }
@@ -39,7 +39,7 @@ public class OrderServiceIOKR implements OrderService {
     @Override
     public void deleteById(Integer id) {
         try {
-            orderRepo.deleteById(id);
+            cowDataRepo.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             JavaFXUtils.showWarningMessage("............");
         } catch (Exception e) {
@@ -48,9 +48,9 @@ public class OrderServiceIOKR implements OrderService {
     }
 
     @Override
-    public Optional<OrderEntity> findById(Integer integer) {
+    public Optional<CowDataEntity> findById(Integer integer) {
 
-        return orderRepo.findById(integer);
+        return cowDataRepo.findById(integer);
 
     }
 //    @Override
@@ -60,38 +60,38 @@ public class OrderServiceIOKR implements OrderService {
 //    }
 
         @Override
-    public Optional<OrderEntity> findCowNumber(String name) {
-        return orderRepo.cowNumberField(name);
+    public Optional<CowDataEntity> findCowNumber(String name) {
+        return cowDataRepo.cowNumberField(name);
     }
 
     @Override
-    public void saveAll(List<OrderEntity> orderEntities) {
-        orderRepo.saveAll(orderEntities);
+    public void saveAll(List<CowDataEntity> orderEntities) {
+        cowDataRepo.saveAll(orderEntities);
     }
 
     @Override
     public void deleteAll() {
         try {
-            orderRepo.deleteAll();
+            cowDataRepo.deleteAll();
         }catch (Exception e){
             JavaFXUtils.showError(e.getMessage());
         }
     }
 
     @Override
-    public List<OrderEntity> getAll() {
-        return orderRepo.findAllByOrderByOrderIdAsc();
+    public List<CowDataEntity> getAll() {
+        return cowDataRepo.findAllByOrderByOrderIdAsc();
     }
 
     @Override
-    public OrderEntity searchByRegNo(Integer integer) {
-        Optional<OrderEntity> o = orderRepo.findById(integer);
-        OrderEntity orderEntity = o.orElse(null);
-        return orderEntity;
+    public CowDataEntity searchByRegNo(Integer integer) {
+        Optional<CowDataEntity> o = cowDataRepo.findById(integer);
+        CowDataEntity cowDataEntity = o.orElse(null);
+        return cowDataEntity;
     }
     @Override
-    public List<OrderEntity> findByCowNumberField(String str) {
+    public List<CowDataEntity> findByCowNumberField(String str) {
 
-        return orderRepo.findByCowNumberField(str);
+        return cowDataRepo.findByCowNumberField(str);
     }
 }

@@ -61,6 +61,7 @@ public class DataManagementServiceOKR implements DataManagementService{
                 dataManagementRepo.save(dataManagement);
             }catch (Exception s){
                 JavaFXUtils.showError(s.getMessage());
+                System.out.printf(s.getMessage());
             }
         }
         return dataManagement;

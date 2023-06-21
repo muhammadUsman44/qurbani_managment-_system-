@@ -18,18 +18,13 @@
                 <Menu mnemonicParsing="false" text="pages">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#dataManagement" text="dataManagement" />
-                        <MenuItem mnemonicParsing="false" onAction="#order" text="Order" />
+                        <MenuItem mnemonicParsing="false" onAction="#cowData" text="CowData" />
                         <MenuItem mnemonicParsing="false" onAction="#user" text="User" />
                     </items>
                 </Menu>
             <Menu mnemonicParsing="false" text="View">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#userInfoButton" text="User Information" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Tables">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#measurementTableButton" text="meausrement Table" />
                </items>
             </Menu>
                 <Menu fx:id="helpButton" mnemonicParsing="false" onAction="#helpButton" text="Help">

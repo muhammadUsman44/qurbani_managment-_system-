@@ -16,6 +16,7 @@ public enum FxmlView {
       return "/fxml/menu.fxml";
     }
   },
+
   HELP {
     @Override
     public String getTitle() {
@@ -50,7 +51,7 @@ public enum FxmlView {
     }
   },
 
-  dataManagement {
+  data_Management {
     @Override
     public String getTitle() {
       return getStringFromResourceBundle("dataManagement.title");
@@ -73,14 +74,15 @@ public enum FxmlView {
     }
   },
 
-  ORDER {
+  COW_DATA {
     @Override
     public String getTitle(){
-      return getStringFromResourceBundle("order.title");
+      return getStringFromResourceBundle("cowData.title");
     }
+
     @Override
     public String getFxmlFile(){
-      return "/fxml/order.fxml";
+      return "/fxml/cowData.fxml";
     }
 
   },
@@ -108,21 +110,6 @@ public enum FxmlView {
       return "/fxml/userInfo.fxml";
     }
   },
-
-
-  MEAUSREMENT_TABLE {
-    @Override
-    public String getTitle() {
-      return getStringFromResourceBundle("meausrementTable.title");
-    }
-
-    @Override
-    public String getFxmlFile() {
-      return "/fxml/meausrementTable.fxml";
-    }
-  },
-
-
 
   Customer {
     @Override

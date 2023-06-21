@@ -1,11 +1,10 @@
 package edu.imdadia.qurbani.controller;
 
 import edu.imdadia.qurbani.Entity.DataManagementEntity;
-import edu.imdadia.qurbani.Entity.OrderEntity;
+import edu.imdadia.qurbani.Entity.CowDataEntity;
 import edu.imdadia.qurbani.config.StageManager;
 import edu.imdadia.qurbani.enumuration.FxmlView;
 import edu.imdadia.qurbani.service.DataManagementService;
-import edu.imdadia.qurbani.service.OrderService;
 import edu.imdadia.qurbani.util.JavaFXUtils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -40,7 +39,7 @@ public class DataManagementController implements Initializable {
     @FXML
     private TableColumn<DataManagementEntity, String> firstNameColum;
     @FXML
-    private TableColumn<OrderEntity, String> dateColum;
+    private TableColumn<CowDataEntity, String> dateColum;
     @FXML
     private ChoiceBox<String> choiceAnimalBox;
     @FXML
@@ -64,7 +63,6 @@ public class DataManagementController implements Initializable {
 
     private final StageManager stageManager;
     private final DataManagementService dataManagementService;
-    private int size;
 
     public DataManagementController(@Lazy StageManager stageManager, DataManagementService dataManagementService) {
         this.stageManager = stageManager;
@@ -347,6 +345,8 @@ public class DataManagementController implements Initializable {
             list.add("fffff");
      list.add("ddddddd");
      list.add("ededdede");
+     list.add("hhhhhh");
+     list.add("ggggg");
 //    DataManagementEntity dataManagement = new DataManagementEntity();
 //        DataManagementService dataManagementService1;
             return list;
